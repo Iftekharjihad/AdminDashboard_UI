@@ -1,0 +1,30 @@
+﻿@model AdminDashboard_UI.Models.Products
+
+@{
+    ViewData["Title"] = "Update Product";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Update Product</h1>
+</div>
+
+<form asp-controller="Product" asp-action="UpdateProductItem" method="post">
+    <div class="mb-3">
+        <label for="productname" class="form-label">Product Name</label>
+        <input type="text" value="@Model.ProductName" name="productname" class="form-control" id="productname" placeholder="Enter product name" required />
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input type="text" name="description" value="@Model.Description" class="form-control" id="description" placeholder="Enter product description" required />
+    </div>
+    <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="text" name="price" value="@Model.Price" class="form-control" id="price" placeholder="Enter product price" required />
+    </div>
+    <div class="mb-3">
+        <label for="color" class="form-label">Color</label>
+        <input type="text" value="@Model.Color" name="color" class="form-control" id="color" placeholder="Enter product color" required />
+    </div>
+    <input type="hidden" name="productid" value="@Model.ProductId" />
+    <button type="submit" class="btn btn-primary">Update Product</button>
+</form>

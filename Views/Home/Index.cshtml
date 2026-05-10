@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Log In";
+}
+
+<div class="text-center">
+    <h1 class="display-4">LogIn</h1>
+</div>
+<div>
+    <form asp-controller="Home" asp-action="Login" method="post">
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" name="username" class="form-control" id="username" placeholder="Enter your username" />
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" id="password" placeholder="Enter your password" />
+        </div>
+        <button type="submit" class="btn btn-primary">Log In</button>
+    </form>
+</div>
